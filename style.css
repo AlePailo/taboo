@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --p1-color: darkblue;
+    --p2-color: #9e0303;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 800;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+#logo {
+    width: 50vw;
+}
+
+body {
+    width: 100%;
+    height: 100svh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgb(119,29,173);
+    background: linear-gradient(135deg, rgba(119,29,173,1) 50%, rgba(26,45,122,1) 100%);
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+#container-1 {
+    display: none;
+}
+
+#container-2 {
+    display: none;
+}
+
+#container-3 {
+    display: none;
+}
+
+#all-scores {
+    background: linear-gradient(to right, darkblue 0%50%, var(--p2-color) 50%100%);
+    border-radius: 20px;
+    height: 15vh;
+    aspect-ratio: 1;
+}
+
+#winner {
+    color: #F4F3F2;
+    font-size: 2rem;
+}
+
+.final-points {
+    width: 50%;
+    height: 100%;
+    color: #F4F3F2;
+    font-size: 2rem;
+}
+
+#results-container {
+    overflow-x: scroll;
+    gap: 2.5vw;
+    justify-content: start;
+    padding: 0 2.5vw;
+}
+
+.cards-container {
+    width: 100%;
+    min-height: 60svh;
+}
+
+.card {
+    background: #F4F3F2;
+    border: 5px solid black;
+    height: 50vh;
+    min-width: 70vw;
+    border-radius: 20px;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.guess {
+    background: black;
+    color: #F4F3F2;
+    font-size: 2.5rem;
+    height: 20%;
+}
+
+.p-words {
+    flex-direction: column;
+    height: 80%;
+}
+
+.p-word {
+    height: 20%;
+    font-size: 1.75rem;
+}
+
+#controls {
+    gap: 10vw;
+}
+
+.fl-full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    margin-top: 7.5svh;
+    color: #F4F3F2;
+    font-size: 2rem;
+    border: 5px solid #000;
+    padding: 1rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+#controls img {
+    width: 17.5vw;
+    aspect-ratio: 1;
+}
+
+#controls img:active {
+    width: 15vw;
+}
+
+#controls div {
+    position: relative;
+}
+
+#skip-num {
+    position: absolute;
+    color: #F4F3F2;
+    top: 0;
+    right: -10px;
+    background: black;
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.turn {
+    position: fixed;
+    width: 70vw;
+    top: 15px;
+    font-size: 3rem;
+    color: #F4F3F2;
+    background: darkblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.final-score {
+    margin-top: 2.5vh;
+    color: #F4F3F2;
+    font-size: 2rem;
+}
+
+#turn-points {
+    margin-left: 20px;
+}
+
+.status {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    right: -2.5%;
+    top: -2.5%;
+    background: var(--status-background);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+#status-correct {
+    --status-background: url("img/check.png");
+}
+
+#status-skipped {
+    --status-background: url("img/right-arrow.png");
+}
+
+#status-error {
+    --status-background: url("img/remove.png");
+}
+
+button {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 5vh;
+    border-radius: 20px;
+    border: 2.5px solid #000;
+}
+
+@media (min-width: 500px){
+    .card {
+        min-width: 22rem;
+    }
+
+    #controls {
+        gap: 2.5rem;
+    }
+
+    #controls img {
+        width: 85px;
+        aspect-ratio: 1;
+    }
+
+    #turn {
+        width: 350px;
+    }
+}
+
+@media (max-width: 350px){
+    
+    #turn {
+        font-size: 2.25rem;
+    }
+}
